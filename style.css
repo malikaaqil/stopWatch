@@ -53,7 +53,7 @@ body {
 }
 
 #buttons button{
-
+    
     font-size: 1.3rem;
     /* width: 100px; */
     padding: 0.5rem 2rem;
@@ -63,33 +63,34 @@ body {
     color: white;
     text-shadow: 1px 1px 2px black;
     /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-    box-shadow: 2px 3px 5px black;
+    box-shadow: 1px 1px 5px black;
     cursor: pointer;
-    transition: .3s;
+    transition: .2s;
+}
+
+#buttons button:hover{
+    box-shadow: 4px 2px 10px black;
 }
 
 #startBtn{
     background-color: #009b22;
 }
-#startBtn:hover{
-    background-color: #00b627;
-}
 
 #startBtn:active{
-    background-color: #01851e;
+    background-color: #00d32e;
 }
 
 #pauseBtn{
-    background-color: #ffe714;
+    background-color: #e7c502;
 }
 
 #pauseBtn:active{
-    background-color: #e4cf10;
+    background-color: #ffe70d;
 }
 
 #resetBtn{
     background-color: #006699;
 }
 #resetBtn:active{
-    background-color: #015781;
+    background-color: #008acf;
 }
