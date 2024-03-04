@@ -9,3 +9,19 @@ let minutes = 0;
 let seconds = 0;
 
 let flag = true;
+
+startBtn.addEventListener("click", () => {
+    if(flag){
+        flag = false
+        console.log(flag);
+    }
+})
+
+pauseBtn.addEventListener("click", () => {
+    if (flag == false) {
+
+        flag = true
+        console.log(flag);
+        
+    }
+})
