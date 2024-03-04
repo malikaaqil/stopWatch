@@ -8,20 +8,32 @@ let hours = 0;
 let minutes = 0;
 let seconds = 0;
 
-let flag = true;
+let flagTimeStop = true;
 
 startBtn.addEventListener("click", () => {
-    if(flag){
-        flag = false
-        console.log(flag);
+    if (flagTimeStop) {
+        flagTimeStop = false
+        runTime()
+        startBtn.innerHTML = "Start"
     }
 })
 
-pauseBtn.addEventListener("click", () => {
-    if (flag == false) {
+function runTime() {
+    if(flagTimeStop == false){
 
-        flag = true
-        console.log(flag);
-        
+        seconds++
+        timer.innerHTML = `${hours} : ${minutes} : ${seconds}`
+
+        setTimeout("runTime()", 1000)
+
+    }
+
+}
+
+pauseBtn.addEventListener("click", () => {
+    if(flagTimeStop == false){
+        flagTimeStop = true
+        startBtn.innerHTML = "Resume"
+
     }
 })
