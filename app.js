@@ -21,7 +21,35 @@ startBtn.addEventListener("click", () => {
 function runTime() {
     if(flagTimeStop == false){
 
+        hours = Number(hours)
+        minutes = Number(minutes)
+        seconds = Number(seconds)
+
         seconds++
+
+        if(seconds == 60){
+            minutes++;
+            seconds = 0;
+        }
+
+        if(minutes == 60){
+            hours++;
+            minutes = 0;
+            seconds = 0;
+        }
+
+        if(seconds < 10){
+            seconds = `0${seconds}`
+        }
+        
+        if(minutes < 10){
+            minutes = `0${minutes}`
+        }
+
+        if(hours < 10){
+            hours = `0${hours}`
+        }
+
         timer.innerHTML = `${hours} : ${minutes} : ${seconds}`
 
         setTimeout("runTime()", 1000)
@@ -34,6 +62,14 @@ pauseBtn.addEventListener("click", () => {
     if(flagTimeStop == false){
         flagTimeStop = true
         startBtn.innerHTML = "Resume"
-
     }
+})
+
+resetBtn.addEventListener("click", () => {
+    flagTimeStop = true;
+    timer.innerHTML = `00 : 00 : 00`;
+
+    hours = 0;
+    minutes = 0;
+    seconds = 0;
 })
