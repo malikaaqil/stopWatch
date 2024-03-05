@@ -68,6 +68,7 @@ pauseBtn.addEventListener("click", () => {
 resetBtn.addEventListener("click", () => {
     flagTimeStop = true;
     timer.innerHTML = `00 : 00 : 00`;
+    startBtn.innerHTML = "Start"
 
     hours = 0;
     minutes = 0;
